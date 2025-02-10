@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+  <link rel="stylesheet" href="style.css">  
+    <title>UNI-P ACADEMY</title>
+    
+    </head>
+
+<body>
+    
+   <nav>
+    
+    <ul class = "navigation" id = "dropdownicon">
+       
+       <li><a href="home">Home</a></li>
+        <li><a href="about">About</a></li>
+         <li><a href="signup">SIGN UP</a></li>
+        <li class = "navigation-right"><a href="contact">Contact</a></li>
+        <li class = "navigation-right"><a href="tutorils">Tutorials</a></li>
+        <li class = "navigation-right"><a href="resources">Resources</a></li>
+        <li class = "dropicon"><a href="javascript:void(0);" onclick="dropdownmenu()">&#9776;</a></li>
+       
+       </ul>
+    
+    
+    </nav> 
+    
+   
+    
+    <div class = "container" id = "gradient">
+         
+    <div class = "row">
+        <div class = "column-6">
+            
+            <div class = "content">
+            <h1 class = "h1">UNI-P ACADEMY</h1>
+            <h2>Unlocking Potentials,One Mind at a Time</h2>
+            <h2>Guiding the next Generation</h2>
+                <p>UniP Tutorial Academy is a cutting-edge learning <br>
+                    platform dedicated to fostering academic <br> excellence, creativity, and critical thinking</p>
+            
+            </div>
+           
+        </div>
+        
+        
+        <div div class = "column-6">
+            <div class = "image">
+        <img src="h.jpg" width="350px;" style="border-radius: 50%;" height="350px;">
+        </div>
+        </div>
+        </div>
+        
+        <div class = "button">
+        <button class = "button-style">SIGN IN
+        
+        </button>
+    
+    </div>
+    </div>
+    
+    
+    
+    
+    
+    <script>
+    
+    function dropdownmenu(){
+        
+        var x = document.getElementById("dropdownicon");
+        
+        if(x.className === "navigation"){
+            
+            x.className += " responsive";
+        }
+        else{
+            
+         x.className = "navigation";  
+        }
+    }
+    </script>
+    
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
