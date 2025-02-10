@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <title>RECIPE WEBSITE</title>
+    
+    <link rel="stylesheet" href="styele.css"> 
+    </head>
+
+
+
+<body>
+    
+   <nav>
+    
+    <ul class = "navigation" id = "dropdownicon">
+       <li><a href="index.html">Home</a></li>
+         <li><a href="about.html">About</a></li>
+           <li><a href="home">Recipes</a></li>
+              <li><a href="home">Recipes</a></li>
+                <li class="right-nav"><a href="home">Categories</a></li>
+                <li  class="right-nav"><a href="home">Meal Planner</a></li>
+                 <li  class="dropicon"><a href="javascript:void(0);" onclick="dropdownmenu()">&#9776;</a></li>
+       
+       
+       </ul>
+    
+    
+    </nav> 
+    
+    
+    <div class = "container" id="gradient">
+    
+    <div class = "row">
+        
+        <div class = "column-6" >
+            <div class="text">
+            <h2>Ignite Your Taste Buds!</h2>
+            <h2>Savor the Heat: Recipes to Set Your Soul on Fire!</h2>
+            <p>Get ready to ignite your passion for cooking! Our recipe system is your ultimate <br>destination for mouth-watering dishes that will set your taste buds ablaze. With <br>a vast collection of recipes, cooking tips, and tricks, you'll be cooking like a pro <br> in no time. Whether you're a foodie, a busy bee, or a culinary newbie, our recipe <br> system has got you covered. Explore, cook, and savor the flavor!</p>
+        </div>
+        </div>
+        
+        <div class = "column-6">
+        
+        <div class = "images">
+       <img src="v.png" style="width: 400px; padding-left: 60px; padding-top: 50px;">
+        </div>
+            </div>
+        </div>
+        
+        <div class = "button">
+        
+        <button class = "sign-in">SIGN IN</button>
+        </div>
+    </div>
+    
+    
+    <script>
+    
+        function dropdownmenu(){
+            
+           var x = document.getElementById("dropdownicon");
+            
+            if(x.className === "navigation"){
+                x.className += " responsive";
+            }
+            else{
+               x.className ="navigation" ;
+            }
+        }
+    
+    </script>
+    
+    
+    </body>
+
+
+
+
+
+</html>

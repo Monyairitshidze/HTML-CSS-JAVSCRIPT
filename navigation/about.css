@@ -1,0 +1,23 @@
+nav,footer,header{
+    
+    display: block;
+}
+
+body{
+    
+    line-height: 1;
+    margin: 0;
+}
+
+#gradient{
+
+background: linear-gradient(#75DDDD,#395C6B);
+}
+
+.container{
+    
+    overflow: hidden;
+    margin: 0;
+    padding:0;
+    width: 100%;
+}
