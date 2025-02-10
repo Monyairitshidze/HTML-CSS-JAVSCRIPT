@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+    
+    <title>FitHive</title>
+    <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+ <body>
+    
+   <nav>
+     
+     <ul class = "container"  style ="padding-inline-start: 0px;">
+         
+       <li><a href="home">Home</a></li>
+          <li><a href="membership">Membership</a></li>
+            <li class = "right"><a href="classes">Classes</a></li>
+              <li class = "right"><a href="abaoutus">About Us</a></li>
+                <li class = "right"><a href="contact">Contact</a></li>
+                 <li class = "dropicon"  id="icon" ><a href="javascript:void(0);" onclick="dropDownIcon()">&#9776;</a></li>
+       
+       </ul>
+     
+     </nav> 
+    
+     
+     <div class = "body-container" id = "gradient">
+     
+     <div class="row">
+         
+       <div class = "column-6">
+         
+         <div class = "signup">
+           
+           <h2>Unleash Your Potential</h2>
+              <h2>Be The Best Version of your Self</h2>
+             <h1>Sign In</h1>
+             
+             <form>
+             <h3><label>Username</label>
+                 <br>
+                
+                  <input type="text" placeholder="username" style="border-radius: 7px; 
+             width: 200px; padding: 4px; font-size: 15px;"
+                    >
+                 </h3>
+            
+             <h3><label>Password</label>
+                 <br>
+                 
+                 <input type="password" placeholder="password" style="border-radius: 7px; 
+             width: 200px; padding: 4px; font-size: 15px;">
+                 </h3>
+             
+                 
+                 <br>
+                 
+                 
+                 <button style="width: 150px; border-radius: 7px; padding: 4px; margin: 6px;">Login</button>
+             
+             </form>
+           </div>
+         </div>  
+         
+         <div  class = "column-6">
+         
+         <div style="padding-top: 15px;">
+             
+             <iframe width="500" height="315" src="https://www.youtube.com/embed/tUykoP30Gb0?si=TVf0Ove8kpOGLbzR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             </div>
+         </div>
+         
+         </div>
+     </div>
+    
+     <header class="header-body">
+     <h1>EMPOWERING YOUR FITNESS JOURNEY</h1>
+     </header>
+     
+     
+     <div class = "after-header">
+         
+        <div class = "row">
+            
+            <div class="col-4" style="padding-left: 100px;">
+                <div class = "box">
+            <img src="p.png" style="width: 100px;">
+                <p>Join FitHive, your ultimate fitness destination. 
+                    <br>Discover a community that motivates and supports 
+                    <br>you every step of the way.
+</p>
+                </div>
+            </div>
+            
+            <div class="col-4">
+            <div class = "box">
+                <img src="p.png" style="width: 100px;">
+                <p>Get fit with our expert trainers and state-of-the-art equipment.
+                    <br>Experience personalized training programs tailored to your goals.
+
+</p>
+            </div>
+                </div>
+            
+            <div class="col-4">
+            <div class = "box">
+                <img src="p.png" style="width: 100px;">
+                <p>Be part of a vibrant fitness community that
+                    inspires and motivates. Enjoy group classes,
+                    workshops, and events that make fitness fun and engaging.
+
+</p>       </div>
+            </div>
+         
+         </div>
+     </div>
+     
+     <div class = "button-1">
+     
+      <button style="width: 150px; border-radius: 7px; padding: 5px; margin: 6px; background-color:#81D6E3; color: white; font-size: 15px;">Learn More</button>
+     </div>
+     
+     <footer>
+     
+     <div class = "container" id = "gradient">
+      <h3 style="text-align: center;">Coppyright 2023 FitHive.All Rights Reserved.</h3>
+     <div class = "row">
+          
+         <div class = "column-3">
+             
+             <div>
+                 <h3 style="padding-left: 40px;"><label>Contact US</label></h3>
+             <ul>
+                 <li>Phone:0818316880</li>
+                 <li>Email:monyairitshidze1@gmail.com</li>
+                 <li>Address:Tshifif Thondoni</li>
+                 </ul>
+             
+             </div>
+         
+         
+         </div>
+         
+           <div class = "column-3">
+             
+             <div>
+                 <h3 style="padding-left: 40px;"><label>Quick Links</label></h3>
+             <ul>
+                 <li><a href="">About Us</a></li>
+                 <li><a href="">Membership Plans</a></li>
+                 <li><a href="">Classes And Training</a></li>
+                 </ul>
+             
+             </div>
+         
+         
+         </div>
+         
+         
+           <div class = "column-3" >
+             
+             <div>
+                 <h3 style="padding-left: 40px;"><label>Social Media</label></h3>
+             <ul>
+                 <li>Facebook:@fithive</li>
+                 <li>Instagram:@fithive</li>
+                 <li>Twitter:@fithive</li>
+                 </ul>
+             
+             </div>
+         
+         
+         </div>
+         
+         
+           <div class = "column-3" >
+             
+             <div>
+                 <h3 style="padding-left: 40px;"><label>Site Map</label></h3>
+             <ul>
+                 <li><a href="">Home</a></li>
+                 <li><a href="">Blog</a></li>
+                 <li><a href="">FAQ</a></li>
+                 </ul>
+             
+             </div>
+         
+         
+         </div>
+         
+         
+         
+         </div>
+     
+     </div>
+        </footer> 
+         
+         
+     <script>
+     
+     function dropDownIcon(){
+         
+         var x = document.querySelector("ul.container");
+         
+         if(x.className === "container"){
+             
+             x.className += "responsive";
+         }
+         
+         else{
+             
+             x.className = "container";
+         }
+     }
+     
+     </script>
+     
+     
+    </body>
+
+
+</html>

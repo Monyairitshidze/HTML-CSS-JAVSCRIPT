@@ -1,0 +1,295 @@
+header,
+footer,
+nav{
+    
+display: block;
+}
+
+body{
+    
+    margin: 0;
+    line-height: 1;
+}
+
+nav{
+    
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul{
+    
+    background-color: #B3B6B7;
+    overflow: hidden;
+    margin: 0;
+    padding:0;
+}
+
+nav ul.container li{
+    
+    float: left;
+    list-style: none;
+    padding: 6px;
+}
+
+
+nav ul.container li.right{
+    
+    float: right;
+}
+
+nav ul.container li a{
+    
+    text-decoration: none;
+    
+}
+
+nav ul.container li a:hover{
+    
+    text-transform: uppercase;
+    color: blue;
+}
+
+ ul.container li.dropicon {
+    
+    display: none;
+}
+
+.row{
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.row::after{
+    
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.column-1{width:8.33%}
+.column-2{width:16.66%}
+.column-3{width:25%}
+.column-4{width:33.33%}
+.column-5{width:41.66%}
+.column-6{width:50%}
+.column-7{width:58.33%}
+.column-8{width:66.66%}
+.column-9{width:75%}
+.column-10{width:83.33%}
+.column-11{width:91.66%}
+.column-12{width:100%}
+
+.signup{
+    
+    padding-left: 100px;
+    padding-bottom: 4px;
+}
+
+/*£££££££££££££STYLE CONTENT££££££££££££££££££*/
+
+.body-container{
+    
+    width: 100%;
+    
+}
+
+
+.container{
+    
+    width: 100%;
+    padding-top: 4px;
+    
+}
+
+
+#gradient{
+    
+    background: linear-gradient(#81D6E3,#ADD9F4);
+}
+
+.header-body{
+    text-align: center;
+}
+
+.col-4{
+    padding: 60px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.icon{
+    
+    text-align: center;
+}
+
+ div.box{
+        
+     background-color: white;
+     box-shadow: 0 0 0 1px rgba(0,0,0,.15),
+            0 2px 3px 0 rgba(0,0,0,.1);
+     
+     text-align: center;
+     width: 200px;
+     border-radius: 10px;
+     padding: 10px;
+    }
+
+li{
+    
+ list-style: none;
+    padding: 3px;
+}
+
+li a{
+    
+    text-decoration: none;
+    
+}
+
+div.button-1{
+    
+    text-align: center;
+}
+/*£££££££££££££MOBILE RESPONSIVE££££££££££££££££££*/
+
+@media screen and (max-width:680px){
+    
+    ul.container li:not(:nth-child(1)){
+        
+        display: none;
+    } 
+    
+    ul.container li.dropicon {
+    
+     display: block;
+     float: right;
+     
+     
+   }
+    
+    ul.container  li.dropicon {
+        
+        position:absolute;
+        right: 0;
+        top: 0;
+    } 
+    
+    ul.container.responsive {
+        
+        position: relative;
+    }
+    
+    ul.container.responsive li{
+        
+     display: inline;
+     float: none;
+    }
+    
+
+   div.column-3{
+    
+   width: 100%;
+   padding: 0;
+   margin: 0;
+}
+    
+    
+    
+    
+    li.dropicon  {
+        
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        
+    }
+    ul.container.responsive li a{
+        
+     display: block;
+     float: left;
+     padding-top: 4px;
+     padding-right: 4px;
+     
+    }
+    
+    
+     li a:hover{
+    
+    text-transform: uppercase;
+    color:  blue;
+  }
+    
+    div.box{
+        
+    margin: 0;
+    }
+    
+    
+    .column-6,
+    .col-4,
+    col-3{
+        
+        width: 100%;
+    }
+    
+    div.column-3{
+        
+        padding-left: 0;
+    }
+    ul li{
+        
+        list-style: none;
+        padding: 4px;
+    }
+    ul li a{
+        
+        text-decoration: none;
+    }
+    
+
+    iframe{
+        
+        width: 480px;
+    }
+    
+ 
+    .signup{
+    
+    padding-left: 4px;
+}
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
