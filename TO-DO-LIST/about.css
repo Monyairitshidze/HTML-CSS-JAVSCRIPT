@@ -1,0 +1,319 @@
+
+*{
+
+    box-sizing:border-box
+}
+body{
+
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    
+}
+
+nav ul{
+
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #eee;
+}
+
+nav ul li{
+
+float:left;
+list-style: none;
+text-transform: uppercase;
+padding: 8px;
+
+}
+
+header{
+
+    font-size: larger;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.introduction,
+.story{
+
+    box-shadow: 0 0 10px 0;
+    opacity: .5px;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 15px;
+    text-align: center;
+    min-height: 16px;
+    animation: left 4s;
+
+}
+
+.round-1{
+
+    padding: 8px;
+    border-radius: 50%;
+    color:black;
+    width:200px;
+    text-align: center;
+    font: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 700;
+    font-style: normal;
+    margin-left: 60PX;
+    transition: 3s;
+
+}
+
+p{
+
+    animation: left 4s;
+}
+
+@keyframes left {
+    
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    
+}
+
+.emkay{
+
+    width: 700px;
+    height: 1220px;
+}
+
+footer{
+
+    background-color: #eee;
+}
+
+.team-meambers{
+
+    padding-left: 20px;
+    box-shadow: 0 0 10px 0;
+    width: 500px;
+    opacity: .5px;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 15px;
+    min-height: 16px;
+    animation: left 4s;
+}
+
+button.contact{
+    
+    padding: 8px;
+    border-radius: 10px;
+    background: linear-gradient(#91C4F2,#8CA0D7);
+    color:white;
+    width:200px;
+    text-align: center;
+    font: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 700;
+    font-style: normal;
+    margin-left: 60PX;
+    transition: 3s;
+    animation: left 4s;
+}
+
+button.contact:hover{
+
+background-color: #BDD5EA;
+transform: rotate(360deg);
+
+}
+
+.Call-to-ActionSection{
+
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.align{
+
+    padding-left: 270px;
+}
+
+.copyright{
+
+    text-align: center;
+    padding-top: 10px;
+}
+
+.column-4{
+
+    box-shadow: 0 0 10px 0;
+    opacity: .5px;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    animation: left 4s;
+}
+
+b.bolding{
+
+    font-weight: 900;
+    font-size: larger;
+}
+
+button.discover{
+
+    padding: 8px;
+    border-radius: 10px;
+    background: linear-gradient(#596869,#515751);
+    color:white;
+    width:200px;
+    text-align: center;
+    font: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 700;
+    font-style: normal;
+    margin-left: 60PX;
+    transition: 3s;
+}
+
+button.discover:hover{
+
+        background: linear-gradient(#0B4F6C,#145C9E);
+        color:white;
+        transform: rotate(360deg);
+}
+
+.aim,
+.video{
+
+    text-align: center;
+}
+
+nav ul li a{
+
+    text-decoration: none;
+}
+
+
+
+nav ul li a:hover{
+
+    text-transform: uppercase;
+    background: rgb(69, 69, 129);
+    color: white;
+}
+
+
+
+/*Footer style*/
+.row{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    }
+    
+    .row::after{
+    
+    content: "";
+    clear: both;
+    display: block;
+    }
+    .column-1{width:8.33%}
+    .column-2{width:16.66%}
+    .column-3{width:25%}
+    .column-4{width:33.33%}
+    .column-5{width:41.66%}
+    .column-6{width:50%}
+    .column-7{width:58.33%}
+    .column-8{width:66.66%}
+    .column-9{width:75%}
+    .column-10{width:83.33%}
+    .column-11{width:91.66%}
+    .column-12{width:100%}
+
+    iframe{
+
+        border-radius: 15px;
+        transition: 2s;
+        animation: left 4s;
+    }
+
+    iframe:hover{
+
+        transform: rotate(360deg);
+
+    }
+
+/*BACKGROUND COLOR*/
+
+.gradient{
+
+    background: linear-gradient(#BDD5EA,#498C8A);
+}
+
+/*Mobile Responsive*/
+@media screen and (max-width:680px) {
+
+    .video{
+
+        display: flex;
+        flex-wrap: wrap;
+        margin: 25px;
+    }
+
+
+    .discover{
+
+
+        margin-left: 30px;
+    }
+
+
+    .team-meambers{
+
+        width: 455px;
+    }
+
+
+    .column-4{
+
+        box-shadow: 0 0 10px 0;
+        opacity: .5px;
+        padding: 10px;
+        border-radius: 15px;
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+    }
+
+
+    .align{
+
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    
+    
+}

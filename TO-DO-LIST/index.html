@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href= "style.css" >
+</head>
+
+<body>
+
+    <nav>
+
+        <ul class = "nav-list" id="dropdownicon">
+
+            <li><a href="index.html">Home</a></li>
+            <li class="top-nav-right"><a href="">Upgrade</a></li>
+            <li class="top-nav-right"><a href="">Contact Us</a></li>
+            <li class="top-nav-right"><a href="">Rource Link</a></li>
+            <li  class="dropicon"><a href="javascript:void(0);" onclick="dropdownmenu()">&#9776;</a></li>
+       
+        </ul>
+    
+    </nav>
+
+
+    <section>
+
+        <div id="gradient">
+
+            <div class = "row">
+
+            <div class = "column-6">
+
+                <div>
+
+                    <div class = "heading">
+                        <b>
+                            <h1>TO-DO List</h1>
+                        </b>
+                    </div>
+                    
+                </div>
+
+                <div class = "description">
+
+                <h3><p>
+                    Welcome aboard! Create, edit, and delete tasks with ease using our user-friendly To-Do List. 
+                    Our Website also allows you to categorize tasks, set recurring reminders, and track your progress over time.
+                </p></h3>
+
+            </div>
+            </div>
+
+            <div class = "column-6">
+
+            <div class = "image">
+
+                <img src="b.avif" class="image1"
+                width="400px;"
+                height="400px;">
+            </div>
+
+        </div>
+        </div>
+        
+
+        <div class = "registration-button">
+        <div>
+
+          <button class = "register" id="signUpBtn" onclick="redirectToSignUp(event)" >Sign Up</button>
+        </div>
+
+    </div>
+    </section>
+
+    <footer>
+        <div class="container" >
+
+            <div class = "copyryte">
+                <h3 style="text-align: center;">Copyright 2023 To-Do List. All Rights Reserved.</h3>
+            </div>
+         <div class="row">
+
+            <div class="column-3">
+              <div>
+                <h3 style="padding-left: 40px;"><label>Contact Us</label></h3>
+                <ul>
+                  <li>Phone: 0818316880</li>
+                  <li>Email: <a href="maonyairitshidze1.com">maonyairitshidze1@gmail.com</a></li>
+                  <li>Address: Tshifif Thondoni</li>
+                </ul>
+              </div>
+            </div>
+            <div class="column-3">
+              <div>
+                <h3 style="padding-left: 40px;"><label>Quick Links</label></h3>
+                <ul>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Pricing</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="column-3">
+              <div>
+                <h3 style="padding-left: 40px;"><label>Social Media</label></h3>
+                <ul>
+                  <li><a href="#" target="_blank">Facebook</a></li>
+                  <li><a href="#" target="_blank">Twitter</a></li>
+                  <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-3">
+          <div>
+            <h3 style="padding-left: 40px;"><label>Site Map</label></h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">To-Do List</a></li>
+              <li class = "login"><a href="login.html">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+        
+
+
+    <script type="text/javascript">
+
+      // Function for dropdown menu
+function dropdownmenu() {
+    var x = document.getElementById("dropdownicon");
+    if (x.className === "nav-list") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-list";
+    }
+}
+
+// Function to redirect to the Sign-Up page
+function redirectToSignUp(event) {
+    event.preventDefault(); // Prevent default behavior
+    window.location.href = "sign-up.html"; // Redirect to the Sign-Up page
+}
+
+// Event listener to run after DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+    var signUpBtn = document.getElementById("signUpBtn");
+    if (signUpBtn) {
+        signUpBtn.addEventListener("click", redirectToSignUp);
+    }
+});
+    
+    </script>
+    
+</body>
+</html>

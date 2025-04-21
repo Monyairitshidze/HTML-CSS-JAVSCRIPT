@@ -1,0 +1,246 @@
+/*############# DEFAULT ##############*/
+
+nav{
+
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body{
+
+    margin: 0;
+}
+
+nav ul{
+
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+@keyframes left {
+    
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    
+}
+
+nav ul.nav-list li{
+
+    float: left;
+    list-style: none;
+    padding: 8px;
+}
+
+nav ul.nav-list li.top-nav-right{
+
+    float: right;
+}
+
+nav ul.nav-list li a{
+
+    text-decoration: none;
+}
+
+nav ul.nav-list li a:hover{
+
+    background-color: rgb(187, 187, 209);
+    text-transform: uppercase;
+}
+
+ul.nav-list li.dropicon {
+    
+    display: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/*Styling the body*/
+
+div.heading h1{
+
+    text-align: center;
+}
+
+#gradient{
+
+    background:linear-gradient(#489FB5,#82C0CC);
+    animation: left 4s;
+}
+
+div.heading h1{
+
+    text-align: center;
+}
+
+
+section{
+
+    padding: 0;
+}
+
+
+.image1{
+
+    border-radius:50%;
+}
+
+.image{
+
+    padding-top: 20px;
+    padding-left: 130px;
+}
+
+.description{
+
+    padding-left: 60px;
+    padding-top: 60px;
+}
+
+button.register{
+
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    padding: 8px;
+    font: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: 600;
+    font-style: normal;
+    background-color: #16697A;
+    color:white;
+
+}
+
+div.registration-button{
+
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Footer Styling */
+
+div#footer-gradient{
+
+    background-color:#eee;
+}
+
+.copyryte{
+
+    text-align: center;
+}
+
+
+
+/* Custom styling*/
+
+.row{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    transition: 4s;
+    }
+    
+    .row::after{
+    
+    content: "";
+    clear: both;
+    display: block;
+    }
+    .column-1{width:8.33%}
+    .column-2{width:16.66%}
+    .column-3{width:25%}
+    .column-4{width:33.33%}
+    .column-5{width:41.66%}
+    .column-6{width:50%}
+    .column-7{width:58.33%}
+    .column-8{width:66.66%}
+    .column-9{width:75%}
+    .column-10{width:83.33%}
+    .column-11{width:91.66%}
+    .column-12{width:100%}
+    
+
+/*#############MOBILE RESPONSIVE#################*/
+
+@media screen and (max-width:680px){
+    
+    nav ul.nav-list li:not(:nth-child(1)){
+
+        display: none;
+    }
+
+    nav ul.nav-list li.dropicon{
+
+        display: block;
+        float: right;
+    }
+
+
+    nav ul.nav-list.responsive{
+        
+        position: relative;
+    }
+
+    nav ul.nav-list.responsive li.dropicon {
+
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    nav ul.nav-list.responsive li{
+        display: inline;
+        float: none;
+    }
+    
+    nav ul.nav-list.responsive li a{
+        display: block;
+        text-align:  left;
+    }
+
+    .column-6,
+    .column-3{
+
+        width: 100%;
+    }
+
+    .image{
+
+        padding-top: 20px;
+        padding-left: 40px;
+        text-align: center;
+    }
+
+    .description{
+
+        text-align: center;
+        padding-left: 20px;
+        padding-top: 2px;
+    }
+
+    div.registration-button{
+
+        padding-top: 15px;
+     
+    }
+
+   ul li.login{
+
+        padding-bottom: 60px;
+    }
+}
