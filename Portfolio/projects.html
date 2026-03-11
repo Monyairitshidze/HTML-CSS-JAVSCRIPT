@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio - Projects</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="projects.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-logo">Portfolio</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <p class="page-label">Projects I have worked on</p>
+    <h1 class="page-title">My Projects</h1>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="python">Python</button>
+    <button class="filter-btn" data-filter="data">Data Analysis</button>
+    <button class="filter-btn" data-filter="ml">Machine Learning</button>
+  </div>
+
+  <!-- Projects Grid -->
+  <section class="projects-section">
+    <div class="projects-grid" id="projects-grid">
+
+      <!-- Example Project Card -->
+      <div class="project-card" data-category="python">
+        <div class="project-img" style="background: linear-gradient(135deg,#1a1a2e,#16213e);">
+          <div class="project-img-label">Python</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="tag">Python</span></div>
+          <h3 class="project-title">Data Cleaning Script</h3>
+          <p class="project-desc">A Python script that cleans and preprocesses CSV data for analysis. Learned how to handle missing values and normalize datasets.</p>
+          <div class="project-links">
+            <a href="https://github.com/veronicamabala/data-cleaning-script" class="project-link outline">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="data">
+        <div class="project-img" style="background: linear-gradient(135deg,#0f3460,#533483);">
+          <div class="project-img-label">Data Analysis</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div>
+          <h3 class="project-title">Sales Data Analysis</h3>
+          <p class="project-desc">Analysed sales datasets using Pandas and visualized trends using Matplotlib. Learned how to extract insights from raw data.</p>
+          <div class="project-links">
+            <a href="https://github.com/veronicamabala/sales-data-analysis" class="project-link outline">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-state" id="empty-state" style="display:none;">
+      <p>No projects in this category yet. Check back soon!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Built with passion by <span>Ms Mabala</span> &copy; 2026</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Link external JS -->
+  <script src="projects.js"></script>
+</body>
+</html>

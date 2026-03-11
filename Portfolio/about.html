@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio - About</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="about.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-logo">Portfolio</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <p class="page-label">Get to know me</p>
+    <h1 class="page-title">About Me</h1>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-section">
+    <div class="about-grid">
+
+      <!-- Left: Photo / Card -->
+      <div class="about-card reveal">
+        <div class="about-photo">
+          <div class="photo-placeholder"><img src="dd55c13a-abf3-433d-9c61-f991ae59a42a.jpg"/></div>
+        </div>
+        <div class="about-meta">
+          <div class="meta-item">
+            <span class="meta-label">Name</span>
+            <span class="meta-value">Mabala Veronica Mususumeli</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Location</span>
+            <span class="meta-value">Nzhelele, Limpopo</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Status</span>
+            <span class="meta-value available">Academic Journey</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Email</span>
+            <span class="meta-value">mabalaveronica@mail.com</span>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="display:block; text-align:center; margin-top:1.5rem;">Hire Me</a>
+      </div>
+
+      <!-- Right: Story + Skills -->
+      <div class="about-text">
+        <div class="reveal">
+          <h2 class="about-heading">My Story</h2>
+          <p class="about-para">
+            Hi! I am <strong>Veronica Mabala</strong>, I am a passionate beginner in Data 
+            Science who discovered the power of working with data and developing intelligent systems. 
+            I started my journey not long ago, and every day I continue learning 
+            new skills in data analysis, machine learning, and artificial intelligence, which keeps me motivated and excited.
+          </p>
+          <p class="about-para">
+            I believe that data and intelligent systems can help us better understand problems and make better decisions.
+             My goal is to continue improving my skills in data science and artificial intelligence, work on real projects,
+              and eventually collaborate with teams to solve real-world problems using data.
+          </p>
+        </div>
+
+        <!-- Skills Bars -->
+        <div class="reveal skills-section">
+          <h2 class="about-heading">My Skills</h2>
+          <div class="skill-bar-wrap">
+            <div class="skill-label"><span>Data Gathering</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-label"><span>Data Processing</span><span class="skill-pct">75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-label"><span>Data Analysis</span><span class="skill-pct">60%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="60"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-label"><span>Git &amp; GitHub</span><span class="skill-pct">50%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="50"></div></div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="reveal timeline-section">
+          <h2 class="about-heading">My Journey</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-year">2025</span>
+                <h3>Did my first Research</h3>
+                <p>Discovered Data Science and write the first code of visualizing data.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-year">2026</span>
+                <h3>Learned Mathematical and Statistical part of data science</h3>
+                <p>Started dive deep into complex analysis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Built with passion by <span>Ms Mabala</span> &copy; 2026</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Link external JS -->
+  <script src="about.js"></script>
+</body>
+</html>
