@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritshidze | Aspiring Data Scientist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;     /* Professional Blue */
+      --primary-light: #3b82f6;
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --text: #1e2937;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 16px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      padding: 1.2rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+    /* Hero */
+    .hero {
+      padding: 160px 5% 100px;
+      text-align: center;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      font-weight: 900;
+      margin-bottom: 0.8rem;
+      color: var(--text);
+    }
+    .hero .subtitle {
+      color: var(--primary);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      font-size: 1.15rem;
+      color: var(--muted);
+    }
+
+    /* Main Layout */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 4.5rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+    }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid var(--primary);
+      margin: 0 auto 1.8rem;
+    }
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .meta-item {
+      margin-bottom: 1.4rem;
+    }
+    .meta-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    .meta-value {
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    /* Main Content */
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    /* Project Cards */
+    .project-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: all 0.4s ease;
+    }
+    .project-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+    }
+    .project-tags {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .tag {
+      background: #dbeafe;
+      color: var(--primary);
+      padding: 0.35rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .project-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+    .project-desc {
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+      line-height: 1.6;
+    }
+
+    /* Skills */
+    .skill-bar-wrap {
+      margin-bottom: 1.6rem;
+    }
+    .skill-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+    .skill-track {
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(to right, var(--primary), var(--primary-light));
+      width: 0;
+      transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Contact */
+    .contact-info p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .contact-info a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 5% 2rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 900px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-logo">Ritshidze</div>
+    <div class="nav-links">
+      <a href="#about" class="active">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="subtitle">Aspiring Data Scientist</p>
+    <h1>Ritshidze</h1>
+    <p>Building intelligent systems with AI, Computer Vision, and data-driven insights. Currently mastering data processing and statistical analysis with Python.</p>
+  </section>
+
+  <div class="main-content">
+
+    <!-- Sidebar Profile -->
+    <div class="sidebar">
+      <div class="profile-img">
+        <img src="img.jpeg" alt="Ritshidze Profile Photo" id="profile-photo">
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Name</div>
+        <div class="meta-value">Ritshidze</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Location</div>
+        <div class="meta-value">Thohoyandou, Limpopo</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Education</div>
+        <div class="meta-value">BSc Computer Science</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Focus</div>
+        <div class="meta-value" style="color:#2563eb;">Data Science & Statistics</div>
+      </div>
+      <a href="#contact" style="display:block; text-align:center; margin-top:2rem; padding:14px; background:var(--primary); color:white; border-radius:8px; text-decoration:none; font-weight:600;">Get In Touch</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+
+      <!-- About -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p style="color:var(--muted); font-size:1.08rem;">
+          Passionate aspiring Data Scientist dedicated to building intelligent systems that combine AI, computer vision, and data-driven solutions. 
+          Currently building a strong foundation in data science from scratch with hands-on experience in data processing and statistical analysis using Python.
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-bar-wrap">
+          <div class="skill-label"><span>Python & Data Processing</span><span>85%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-label"><span>Statistical Analysis</span><span>80%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-label"><span>Pandas, NumPy & Visualization</span><span>75%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-label"><span>Computer Vision (OpenCV)</span><span>65%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-width="65"></div></div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Featured Projects</h2>
+
+        <div class="project-card">
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Statistics</span>
+          </div>
+          <h3 class="project-title">Data Processing & Statistical Analysis</h3>
+          <p class="project-desc">
+            Built Jupyter notebooks focused on data cleaning, preparation, variance, standard deviation, coefficient of variation, 
+            correlation analysis, correlation matrices, and professional visualizations using Matplotlib.
+          </p>
+          <a href="https://github.com/Monyairitshidze/Zenyx-Analytics.git" target="_blank" style="color:var(--primary); font-weight:500;">View Project on GitHub →</a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">MySQL</span>
+          </div>
+          <h3 class="project-title">Student Learning System</h3>
+          <p class="project-desc">
+            Desktop application built with JReact and MySQL for easy learning.
+          </p>
+          <a href="https://github.com/Monyairitshidze/ZenyxDev.git" target="_blank" style="color:var(--primary); font-weight:500;">View Project on GitHub →</a>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Let's Connect</h2>
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:your.email@example.com">monyairitshidze1@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank">www.linkedin.com/in/monyai-ritshidze-339374292</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">https://github.com/Monyairitshidze</a></p>
+        </div>
+        <p style="margin-top: 2rem; color: var(--muted);">Open to opportunities, collaborations, and learning experiences in Data Science and AI.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Ritshidze • Aspiring Data Scientist • Thohoyandou, Limpopo</p>
+  </footer>
+
+  <script>
+    // Animate skill bars
+    const skillFills = document.querySelectorAll('.skill-fill');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const width = entry.target.getAttribute('data-width');
+          entry.target.style.width = width + '%';
+        }
+      });
+    }, { threshold: 0.6 });
+
+    skillFills.forEach(bar => observer.observe(bar));
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
