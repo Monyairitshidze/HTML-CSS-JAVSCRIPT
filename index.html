@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2563eb;     /* Professional Blue */
+      --primary: #2563eb;
       --primary-light: #3b82f6;
       --bg: #ffffff;
       --surface: #f8fafc;
@@ -25,7 +25,6 @@
       line-height: 1.7;
     }
 
-    /* Navigation */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -57,7 +56,6 @@
     }
     .nav-links a:hover, .nav-links a.active { color: var(--primary); }
 
-    /* Hero */
     .hero {
       padding: 160px 5% 100px;
       text-align: center;
@@ -84,7 +82,6 @@
       color: var(--muted);
     }
 
-    /* Main Layout */
     .main-content {
       max-width: 1200px;
       margin: 0 auto;
@@ -94,7 +91,6 @@
       gap: 4.5rem;
     }
 
-    /* Sidebar */
     .sidebar {
       background: white;
       border: 1px solid var(--border);
@@ -133,7 +129,6 @@
       font-weight: 500;
     }
 
-    /* Main Content */
     .content {
       display: flex;
       flex-direction: column;
@@ -146,7 +141,6 @@
       color: var(--primary);
     }
 
-    /* Project Cards */
     .project-card {
       background: white;
       border: 1px solid var(--border);
@@ -184,7 +178,6 @@
       line-height: 1.6;
     }
 
-    /* Skills */
     .skill-bar-wrap {
       margin-bottom: 1.6rem;
     }
@@ -207,7 +200,6 @@
       transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* Contact */
     .contact-info p {
       margin-bottom: 1rem;
       font-size: 1.1rem;
@@ -260,7 +252,7 @@
     <!-- Sidebar Profile -->
     <div class="sidebar">
       <div class="profile-img">
-        <img src="img.jpeg" alt="Ritshidze Profile Photo" id="profile-photo">
+        <img src="img.jpeg" alt="Ritshidze Profile Photo">
       </div>
       <div class="meta-item">
         <div class="meta-label">Name</div>
@@ -318,6 +310,7 @@
       <section id="projects">
         <h2>Featured Projects</h2>
 
+        <!-- Project 1: Original -->
         <div class="project-card">
           <div class="project-tags">
             <span class="tag">Python</span>
@@ -333,26 +326,50 @@
         </div>
 
 
+        <!-- New Project 1 -->
         <div class="project-card">
           <div class="project-tags">
-            <span class="tag">Java</span>
-            <span class="tag">MySQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">Statsmodels</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Regression</span>
           </div>
-          <h3 class="project-title">Student Learning System</h3>
+          <h3 class="project-title">COVID-19 Linear Regression: Confirmed vs Active Cases</h3>
           <p class="project-desc">
-            Desktop application built with JReact and MySQL for easy learning.
+            Performed linear regression analysis using statsmodels to examine the relationship between active and confirmed COVID-19 cases. 
+            Data was cleaned from day_wise.csv, model fitted with formula <strong>Confirmed ~ Active</strong>. 
+            Achieved R-squared = 0.973 with statistically significant results (p-value &lt; 0.05).
           </p>
-          <a href="https://github.com/Monyairitshidze/ZenyxDev.git" target="_blank" style="color:var(--primary); font-weight:500;">View Project on GitHub →</a>
+          <a href="#" target="_blank" style="color:var(--primary); font-weight:500;">View Project on GitHub →</a>
         </div>
+
+        <!-- New Project 2 -->
+        <div class="project-card">
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">Statsmodels</span>
+          </div>
+          <h3 class="project-title">COVID-19 Statistical Analysis: Recovered vs Active Cases</h3>
+          <p class="project-desc">
+            Comprehensive analysis of COVID-19 data including data cleaning, descriptive statistics, percentiles, variance, 
+            correlation matrix with heatmap, visualizations, and linear regression using both scipy and statsmodels. 
+            Explored the relationship between recovered and active cases with detailed interpretation.
+          </p>
+          <a href="#" target="_blank" style="color:var(--primary); font-weight:500;">View Project on GitHub →</a>
+        </div>
+
       </section>
 
       <!-- Contact -->
       <section id="contact">
         <h2>Let's Connect</h2>
         <div class="contact-info">
-          <p><strong>Email:</strong> <a href="mailto:your.email@example.com">monyairitshidze1@gmail.com</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank">www.linkedin.com/in/monyai-ritshidze-339374292</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">https://github.com/Monyairitshidze</a></p>
+          <p><strong>Email:</strong> <a href="mailto:monyairitshidze1@gmail.com">monyairitshidze1@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/monyai-ritshidze-339374292" target="_blank">www.linkedin.com/in/monyai-ritshidze-339374292</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/Monyairitshidze" target="_blank">https://github.com/Monyairitshidze</a></p>
         </div>
         <p style="margin-top: 2rem; color: var(--muted);">Open to opportunities, collaborations, and learning experiences in Data Science and AI.</p>
       </section>
@@ -365,7 +382,6 @@
   </footer>
 
   <script>
-    // Animate skill bars
     const skillFills = document.querySelectorAll('.skill-fill');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -378,13 +394,10 @@
 
     skillFills.forEach(bar => observer.observe(bar));
 
-    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
     });
   </script>
