@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ritshidze | Aspiring Data Scientist</title>
+  <meta name="description" content="Portfolio of Ritshidze, a final-year BSc Honours Computer Science student building data-driven systems with Python, Pandas, and machine learning.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -128,6 +129,29 @@
       font-size: 1.05rem;
       font-weight: 500;
     }
+    .social-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.9rem;
+      margin: 1.6rem 0 0.4rem;
+    }
+    .social-row a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .social-row a:hover {
+      background: var(--primary);
+      color: white;
+    }
 
     .content {
       display: flex;
@@ -195,6 +219,26 @@
     .skill-bar-wrap {
       margin-bottom: 1.6rem;
     }
+    .experience-item {
+      border-left: 3px solid var(--primary);
+      padding: 0.3rem 0 0.3rem 1.4rem;
+      margin-bottom: 1.8rem;
+    }
+    .experience-role {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .experience-meta {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+    .experience-desc {
+      color: var(--muted);
+      line-height: 1.6;
+    }
     .skill-label {
       display: flex;
       justify-content: space-between;
@@ -248,6 +292,8 @@
     <div class="nav-logo">Ritshidze</div>
     <div class="nav-links">
       <a href="#about" class="active">About</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
@@ -284,7 +330,12 @@
         <div class="meta-label">Focus</div>
         <div class="meta-value" style="color:#2563eb;">Data Science & Statistics</div>
       </div>
-      <a href="#contact" style="display:block; text-align:center; margin-top:2rem; padding:14px; background:var(--primary); color:white; border-radius:8px; text-decoration:none; font-weight:600;">Get In Touch</a>
+      <div class="social-row">
+        <a href="https://github.com/Monyairitshidze" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/monyai-ritshidze-339374292" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:monyairitshidze1@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <a href="#contact" style="display:block; text-align:center; margin-top:1rem; padding:14px; background:var(--primary); color:white; border-radius:8px; text-decoration:none; font-weight:600;">Get In Touch</a>
     </div>
 
     <!-- Main Content -->
@@ -303,10 +354,44 @@
           answer a real question rather than just producing charts.
         </p>
         <p style="color:var(--muted); font-size:1.08rem;">
-          Outside the lab, I work as a Lab Demonstrator and Java Tutor, help other students find their footing in code,
-          and stay active in my community through church and youth mentorship. I'm always looking for new problems to
-          learn from.
+          I stay active in my community through church and youth mentorship, and I'm always looking for new problems
+          to learn from.
         </p>
+      </section>
+
+      <!-- Achievements -->
+      <section id="achievements">
+        <h2>Achievements</h2>
+        <div class="experience-item">
+          <div class="experience-role">🏆 Toyota Award</div>
+          <div class="experience-meta">University of Venda</div>
+          <p class="experience-desc">Awarded for top departmental performance in Computer Science.</p>
+        </div>
+        <div class="experience-item">
+          <div class="experience-role">🥇 1st Place, Limpopo Varsity Hackathon (x2)</div>
+          <div class="experience-meta">Borehole Management System &amp; Livestock Tracking System</div>
+          <p class="experience-desc">Won first place twice, building solutions aimed at real problems rather than just demo-ready features.</p>
+        </div>
+        <div class="experience-item">
+          <div class="experience-role">🥇 1st Place, Univen–UL–UJ Symposium</div>
+          <div class="experience-meta">Bela Bela, 2026</div>
+          <p class="experience-desc">Presented Honours research on CNN-based classification and placed first at the symposium.</p>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+          <div class="experience-role">Lab Demonstrator</div>
+          <div class="experience-meta">University of Venda</div>
+          <p class="experience-desc">Assist students in practical computer science lab sessions, helping them work through exercises and troubleshoot code.</p>
+        </div>
+        <div class="experience-item">
+          <div class="experience-role">Java Tutor</div>
+          <div class="experience-meta">University of Venda</div>
+          <p class="experience-desc">Tutor fellow students in Java programming fundamentals, from syntax and logic through to object-oriented concepts.</p>
+        </div>
       </section>
 
       <!-- Skills -->
@@ -519,7 +604,7 @@
             and units sold by category, monthly sales trends, and spending by age group. Visualized findings with
             Matplotlib to identify the strongest-performing category and highest-value customer segment.
           </p>
-          <a href="https://github.com/Monyairitshidze/Zenyx-Analytics/tree/retail_analysis" target="_blank" style="color:var(--primary); font-weight:500;">View Project on GitHub →</a>
+          <a href="https://github.com/Monyairitshidze/Zenyx-Analytics" target="_blank" style="color:var(--primary); font-weight:500;">View Project on GitHub →</a>
         </div>
 
       </section>
